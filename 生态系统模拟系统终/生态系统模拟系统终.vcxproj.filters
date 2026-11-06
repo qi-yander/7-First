@@ -27,6 +27,9 @@
     <ClInclude Include="Grass.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="EcoSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Organism.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Grass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EcoSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

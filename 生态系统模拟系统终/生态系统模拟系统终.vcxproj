@@ -139,12 +139,14 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EcoSystem.h" />
     <ClInclude Include="Grass.h" />
     <ClInclude Include="Organism.h" />
     <ClInclude Include="Sheep.h" />
     <ClInclude Include="Wolf.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EcoSystem.cpp" />
     <ClCompile Include="Grass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Organism.cpp" />

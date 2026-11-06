@@ -55,6 +55,7 @@ public:
     virtual void reproduce(vector<Organism*>& ecosystem) = 0;//等于0表示纯虚函数
     virtual void save(ofstream& out) = 0;
     virtual void load(ifstream& in) = 0;
+    virtual bool beEaten(Organism* attacker) = 0;//被吃掉的行为
     //virtual是个纯虚函数 上面这五句话要求子类必须自己写这函数的代码，实现多态基础（多态，基类只定义接口）
     //以下是动物有性繁殖的条件
     bool canReproduce(Organism* other) {//other是基类指针，可以指向草，羊，狼等不同的子类对象，节省了分别写不同子类的同一行为的代码量，也可以把不同的子类放在一个数组里，方便管理
@@ -62,7 +63,7 @@ public:
             return false;
         }
         if (position != other->getPosition())return false;
-        if (age < 5|| other->age <5)return false;//年龄小于5不能繁殖
+        if (age < 5|| other->getAge()<5)return false;//年龄小于5不能繁殖
         if (gender == other->gender)return false;//同性不能繁殖
         return true;
     }

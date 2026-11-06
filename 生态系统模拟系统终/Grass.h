@@ -12,6 +12,7 @@ public:
 	void save(ofstream& out) override;//ofstream是输出文件流，写文件（保存数据）
 	void load(ifstream& in) override;//ifstream是输入文件流，读文件（加载数据）
 	//&是引用，直接操作原来的文件流，方便保存和加载数据，out是输出，in是输入
+	bool beEaten(Organism* attacker) override;//被吃掉的行为，传入一个基类指针，指向攻击者对象，方便扩展（草可以被羊吃，也可以被其他动物吃）
 };
 //继承继承的是成员变量与成员函数，构造函数和析构函数不继承
 //析构函数不是为了继承给子类，是专门给基类指针使用的，子类对象被销毁时会先调用子类的析构函数，再调用基类的析构函数
